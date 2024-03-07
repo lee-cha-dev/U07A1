@@ -1,0 +1,179 @@
+.root {
+    -fx-background-color: #141414;
+    -fx-font-weight: bold;
+}
+
+.learner-hbox {
+
+}
+
+.label {
+    -fx-text-fill: #F0F0F0;
+}
+
+.table-label {
+    -fx-text-fill: #F0F0F0;
+    -fx-font-size: 14px;
+    -fx-alignment: center;
+    -fx-max-width: infinity;
+}
+
+.text-field {
+    -fx-background-color: #000000;
+    -fx-text-fill: #F0F0F0;
+}
+
+.button {
+    -fx-background-color: #F0F0F0;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #000000;
+}
+
+.button:hover {
+    -fx-background-color: #000000;
+    -fx-text-fill: #F0F0F0;
+    -fx-cursor: hand;
+}
+
+.registered-courses {
+    -fx-background-color: #FBF80B;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.credit-hour-label {
+    -fx-background-color: #FBF80B;
+    -fx-text-fill: #000000;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 2 3 2 3;
+}
+
+.course-table {
+    -fx-background-color: #141414;
+    -fx-border-color: #FBF80B;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-min-width: 100%;
+    -fx-padding: 2.5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 1), 10, 0.0, 0, 0);
+}
+
+.course-table .scroll-bar:horizontal {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-opacity: 0;
+    -fx-padding: 0;
+}
+
+.course-table .scroll-bar:vertical {
+    -fx-min-width: 12;
+    -fx-pref-width: 12;
+    -fx-max-width: 12;
+    -fx-background-color: #141414;
+}
+
+/*STYLING THE SCROLL BAR*/
+/* STYLE THE TRACK OF THE SCROLL BAR */
+.course-table .scroll-bar:vertical .track {
+    -fx-background-color: #141414;
+}
+
+/* STYLE THE THUMB OF THE BAR */
+.course-table .scroll-bar:vertical .thumb {
+    -fx-background-color: #FBF80B;
+}
+
+.course-table .scroll-bar:vertical .thumb:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #000000;
+}
+
+/* STYLE THE DECREMENT AND INCREMENT BUTTONS OF THE BAR */
+.course-table .scroll-bar:vertical .increment-button,
+.course-table .scroll-bar:vertical .decrement-button {
+    -fx-background-color: #141414;
+    -fx-border-color: #141414;
+    -fx-padding: 2, 6, 2, 6;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.course-table .scroll-bar:vertical .increment-button:hover,
+.course-table .scroll-bar:vertical .decrement-button:hover {
+    -fx-cursor: hand;
+}
+
+/* STYLE THE ARROWS INSIDE THE INCREMENT AND DECREMENT BUTTONS */
+.course-table .scroll-bar:vertical .increment-arrow,
+.course-table .scroll-bar:vertical .decrement-arrow {
+    -fx-background-color: #FBF80B;
+}
+
+.course-table .scroll-bar:vertical .increment-arrow:hover,
+.course-table .scroll-bar:vertical .decrement-arrow:hover {
+    -fx-background-color: #000000;
+}
+
+.course-table .cell {
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+}
+
+.course-table .text {
+    -fx-alignment: center;
+}
+
+.course-table .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.course-table .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.course-table .column-header {
+    -fx-background-color: #141414;
+    -fx-background-insets: 0, 0, 1;
+}
+
+.course-table .column-header .label {
+    -fx-text-fill: #F0F0F0;
+}
+
+.course-table .table-row-cell {
+    -fx-background-color: #000000;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+}
+
+.course-table .table-row-cell:selected {
+    -fx-background-color: #141414;
+}
+
+.course-table .table-row-cell:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #141414;
+    -fx-text-fill: #FBF80B;
+    -fx-border-color: transparent;
+}
+
+.course-table .table-row-cell:selected:hover {
+    -fx-background-color: #141414;
+    -fx-text-fill: #FBF80B;
+}
+
+.course-table .table-row-cell:selected:hover .table-cell {
+    -fx-text-fill: #FBF80B;
+}
+
+.course-table .table-cell {
+    -fx-text-fill: #FBF80B;
+    -fx-border-color: transparent;
+}
+
+.course-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: #ffffff;
+}

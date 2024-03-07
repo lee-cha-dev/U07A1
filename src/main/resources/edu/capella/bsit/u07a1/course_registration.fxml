@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<?import javafx.scene.control.skin.TableHeaderRow?>
+<GridPane
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        fx:id="grid"
+        alignment="CENTER"
+        hgap="5.0"
+        vgap="5.0"
+        fx:controller="edu.capella.bsit.u07a1.CourseRegistrationController"
+        prefHeight="400.0" prefWidth="600.0"
+>
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10" />
+    </padding>
+    <rowConstraints>
+        <RowConstraints percentHeight="8" />
+        <RowConstraints percentHeight="10" />
+        <RowConstraints percentHeight="30" />
+        <RowConstraints percentHeight="4" />
+        <RowConstraints percentHeight="8" />
+        <RowConstraints percentHeight="30" />
+        <RowConstraints percentHeight="12" />
+    </rowConstraints>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="65" />
+        <ColumnConstraints percentWidth="35" />
+    </columnConstraints>
+
+    <HBox fx:id="learnerHBox" spacing="18" alignment="CENTER_LEFT" GridPane.rowIndex="0" styleClass="learner-hbox">
+        <padding>
+            <Insets left="10" />
+        </padding>
+        <Label fx:id="learnerID" text="Learner ID:" styleClass="label" />
+        <TextField fx:id="learnerIDValue" promptText="Enter your ID" styleClass="text-field" />
+        <Button fx:id="learnerSignIn" text="Sign In" styleClass="button" onAction="#signIn">
+            <padding>
+                <Insets left="5" top="3" right="5" bottom="3" />
+            </padding>
+        </Button>
+    </HBox>
+    <HBox fx:id="creditsHBox" spacing="18" alignment="CENTER_RIGHT" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="learner-hbox">
+        <padding>
+            <Insets right="10" />
+        </padding>
+        <Label
+                fx:id="creditHourPromptLabel"
+                styleClass="label"
+                text="Total Credits:"
+        />
+        <Label
+                fx:id="creditHoursLabel"
+                styleClass="credit-hour-label"
+                text="0"
+        />
+    </HBox>
+    <Label
+            fx:id="selectPromptLabel"
+            text="Please select a course for which you want to register"
+            styleClass="table-label"
+            GridPane.rowIndex="1"
+            GridPane.columnSpan="2"
+    />
+    <TableView
+        fx:id="coursesTable"
+        styleClass="course-table"
+        GridPane.rowIndex="2"
+        GridPane.columnSpan="2"
+        GridPane.hgrow="ALWAYS"
+        maxWidth="1.0E38"
+    >
+        <columns>
+            <TableColumn text="Course ID" fx:id="courseIdColumn" prefWidth="150.0" />
+            <TableColumn text="Credits" fx:id="creditsColumn" prefWidth="150.0" />
+        </columns>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+    </TableView>
+    <Label
+            fx:id="registerTableLabel"
+            styleClass="table-label"
+            text="Registered Courses"
+            GridPane.rowIndex="4"
+            GridPane.columnSpan="2"
+            alignment="CENTER"
+    />
+    <TableView
+            fx:id="registeredCoursesTable"
+            styleClass="course-table"
+            GridPane.rowIndex="5"
+            GridPane.columnSpan="2"
+            GridPane.hgrow="ALWAYS"
+            maxWidth="1.0E38"
+    >
+        <columns>
+            <TableColumn text="Course ID" fx:id="regCourseIdColumn" prefWidth="150.0" />
+            <TableColumn text="Credits" fx:id="regCreditsColumn" prefWidth="150.0" />
+        </columns>
+        <padding>
+            <Insets top="10" right="10" bottom="10" left="10" />
+        </padding>
+    </TableView>
+    <Label
+        fx:id="confirmPromptLabel"
+        styleClass="label"
+        GridPane.rowIndex="6"
+    />
+</GridPane>

@@ -1,0 +1,8 @@
+edu\capella\bsit\u07a1\SystemInfo.class
+edu\capella\bsit\u07a1\LogManager.class
+edu\capella\bsit\u07a1\CourseRegistrationController.class
+edu\capella\bsit\u07a1\Course.class
+module-info.class
+edu\capella\bsit\u07a1\App.class
+edu\capella\bsit\u07a1\CourseRegistrationService.class
+edu\capella\bsit\u07a1\RegisteredCourse.class

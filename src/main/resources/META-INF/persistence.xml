@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <!-- persistence-unit name must match name of service class -->
+    <persistence-unit name="CourseRegistrationService" transaction-type="RESOURCE_LOCAL">
+    <provider> org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <!-- name of classes (incl. package) used for persistence -->
+    <class>edu.capella.bsit.u07a1.Course</class>
+    <class>edu.capella.bsit.u07a1.RegisteredCourse</class>
+    <properties>
+      <!-- **************** Database login information  **************** -->  
+      <property name="jakarta.persistence.jdbc.url" value=""/>
+      <property name="jakarta.persistence.jdbc.user" value=""/>
+      <property name="jakarta.persistence.jdbc.password" value=""/>
+      <!-- ************* End of database login information  ************* -->
+      <property name="jakarta.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.use_sql_comments" value="true"/>
+      <property name="jakarta.persistence.schema-generation.database.action" value="none"/>
+    </properties>
+  </persistence-unit>
+</persistence>
